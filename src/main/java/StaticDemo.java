@@ -1,6 +1,8 @@
 public class StaticDemo {
 
         public  static void main(String args[]){
+            System.out.println(Math.floor(2.9999999));
+            System.out.println(Math.ceil(2.005));
             short s = 9;
 //            System.out.println(add(s,6));
             Outer o=new Outer();
