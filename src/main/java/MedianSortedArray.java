@@ -52,7 +52,8 @@ public class MedianSortedArray {
                 } else {
                     return (double)Math.max(maxLeftX, maxLeftY);
                 }
-            } else if (maxLeftX > minRightY) { //we are too far on right side for partitionX. Go on left side.
+            } else if (maxLeftX > minRightY) {
+                //we are too far on right side for partitionX. Go on left side.
                 high = partitionX - 1;
             } else { //we are too far on left side for partitionX. Go on right side.
                 low = partitionX + 1;

@@ -25,6 +25,7 @@ public class Trie {
     }
 
     public boolean startsWith(String prefix) {
+        prefix.split("",2);
         TrieNode node = searchPrefix(prefix);
         return node != null;
     }
@@ -42,6 +43,13 @@ public class Trie {
             }
         }
         return node;
+    }
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("leetcode");
+        trie.insert("geeks");
+        trie.insert("sunil");
+        trie.startsWith("lee");
     }
 
 }
