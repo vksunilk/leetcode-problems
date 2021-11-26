@@ -9,7 +9,8 @@ public class KadaneAlgorithm {
         int maxSoFar = array[0];
         for (int i = 1; i < array.length; i++) {
             int num = array[i];
-            maxEndingHere = Math.max(num, maxEndingHere+num);
+            maxEndingHere=maxEndingHere+num;
+            maxEndingHere = Math.max(num, maxEndingHere);
             maxSoFar =  Math.max(maxSoFar, maxEndingHere);
         }
         return maxSoFar;

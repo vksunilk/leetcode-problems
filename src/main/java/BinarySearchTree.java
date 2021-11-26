@@ -70,20 +70,20 @@ public class BinarySearchTree {
     }
 
     private void remove(int value, BinarySearchTree parent) {
-        if(value < this.value){
+        if (value < this.value) {
             if(this.left!=null) {
                 this.left.remove(value,this);
             }
-        } else if(value > this.value) {
-            if(this.right!=null) {
+        } else if (value > this.value) {
+            if (this.right!=null) {
                 this.right.remove(value, this);
             }
         } else {
-            if(this.right != null && this.left != null) {
+            if (this.right != null && this.left != null) {
                 this.value = right.getMinValue();
                 this.right.remove(this.value, this);
             } else if (parent ==null) {
-                if(this.left!=null) {
+                if (this.left!=null) {
                     this.value=left.value;
                     this.right=left.right;
                     this.left=left.left;

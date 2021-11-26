@@ -8,7 +8,7 @@ public class Graph {
     private LinkedList<Integer> adj[];
 
     // Create a graph
-    Graph(int v) {
+    public Graph(int v) {
         V = v;
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i)
@@ -23,14 +23,14 @@ public class Graph {
     // BFS algorithm
     public void bfs(int s) {
 
-        boolean visited[] = new boolean[V];
+        boolean[] visited = new boolean[V];
 
         LinkedList<Integer> queue = new LinkedList<>();
 
         visited[s] = true;
         queue.add(s);
 
-        while (queue.size() != 0) {
+        while (!queue.isEmpty()) {
             s = queue.poll();
             System.out.print(s + " ");
 
